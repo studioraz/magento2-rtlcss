@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright Â© 2016 Studio Raz. All rights reserved.
+ * For more information contact us at dev@studioraz.co.il
+ * See COPYING_STUIDORAZ.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+   <preference for="Magento\Framework\Css\PreProcessor\Adapter\Less\Processor" type="SR\Rtlcss\Model\Processor\Less" />
+</config>
