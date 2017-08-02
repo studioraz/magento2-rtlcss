@@ -117,7 +117,7 @@ class Less implements ContentProcessorInterface {
 
         if ($asset->getContext()->getAreaCode() == "frontend"
             && $asset->getContext()->getLocale() == "he_IL"
-            && in_array($asset->getFilePath(), array('mage/gallery/gallery.less'))
+            && in_array($asset->getFilePath(), array('mage/gallery/gallery.less')) == false
         ) {
             
             $cssTreeParser = new Parser($content);
