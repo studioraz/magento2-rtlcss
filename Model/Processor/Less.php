@@ -115,8 +115,11 @@ class Less implements ContentProcessorInterface {
     public function processRTL(File $asset, $content)
     {
 
-        if ($asset->getContext()->getAreaCode() == "frontend" && $asset->getContext()->getLocale() == "he_IL") {
-
+        if ($asset->getContext()->getAreaCode() == "frontend"
+            && $asset->getContext()->getLocale() == "he_IL"
+            && in_array($asset->getFilePath(), array('mage/gallery/gallery.less'))
+        ) {
+            
             $cssTreeParser = new Parser($content);
             $tree = $cssTreeParser->parse();
             $rtlcss = new RTLCSS\RTLCSS($tree);
