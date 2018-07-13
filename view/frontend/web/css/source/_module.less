@@ -1,0 +1,56 @@
+// /**
+//  * Copyright © 2018 Studio Raz. All rights reserved.
+//  * For more information contact us at dev@studioraz.co.il
+//  * Created by Denys (denys@studioraz.co.il)
+//  */
+
+@theme-direction: ltr;
+
+//@icon-next: '\e617';
+//@icon-prev: '\e608';
+//@icon-pointer-right: '\e61a';
+//@icon-pointer-left: '\e619';
+//@icon-arrow-right-thin: '\e625';
+//@icon-arrow-left-thin: '\e624';
+// ST-TODO: find a way to change icon codes dynamically depending on theme direction
+
+& when (@media-common = true) and (@theme-direction = rtl) {
+    /*rtl:begin:ignore*/
+    :root[dir="rtl"] {
+        .navigation .level0 .submenu .submenu-reverse {
+            left: auto !important;
+            right: 100% !important;
+        }
+
+        .swatch-attribute-label,
+        .swatch-attribute-selected-option {
+            display: inline-block;
+        }
+
+        .swatch-option-tooltip,
+        .swatch-option-tooltip-layered {
+            .corner {
+                right: 0;
+                left: 0 !important;
+
+                &:before,
+                &:after {
+                    position: absolute;
+                    top: 8px;
+                    right: 0;
+                    left: 0;
+                    margin: auto;
+                }
+            }
+        }
+
+        .filter-options .count {
+            display: inline-block;
+        }
+
+        .rating-summary .rating-result {
+            text-indent: 10px;
+        }
+    }
+    /*rtl:end:ignore*/
+}
